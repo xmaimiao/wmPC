@@ -15,5 +15,5 @@ search_simple:
 
 serach_simple_records:
   - by: xpath
-    locator: '//*[@class="ivu-table-tbody"]/tr[1]/td[3]//span'
+    locator: '//*[@class="ivu-table-tbody"]/tr[1]/td[3]//span[contains(text(),"${expect}")]'
     action: wait_display

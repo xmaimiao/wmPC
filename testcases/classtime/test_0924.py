@@ -1,12 +1,14 @@
 import os
 import sys
 
-from common.contants import test_0924_dir
 
-curPath = os.path.abspath(os.path.dirname(__file__))
+# curPath = os.path.abspath(os.path.dirname(__file__))
 base_dir = os.path.dirname(os.path.dirname(os.path.dirname(__file__)))
+# base_dir = os.path.dirname(os.path.dirname(__file__))
 sys.path.append(base_dir)
-sys.path.append('..')
+# sys.path.append('..')
+print(sys.path)
+from common.contants import test_0924_dir
 from page.main import Main
 import pytest
 import yaml
@@ -83,6 +85,7 @@ class Test0924:
             goto_postgraduate_sign_in_record(data["memu"]). \
             search_simple(data["keywords"]). \
             serach_simple_records()
+        print(sys.path)
         assert result == data["expect"]
 
     @pytest.mark.parametrize("data", test_search_student_username_is_exist_datas)
@@ -94,7 +97,7 @@ class Test0924:
         result = self.main. \
             goto_student_management_degree(data["memu"]). \
             search_simple(data["keywords_stu_all"]). \
-            get_choice_value()
+            get_choice_value(data["expect"])
         assert result == data["expect"]
 
     @pytest.mark.parametrize("data", test_search_student_username_not_exist_datas)

@@ -13,7 +13,7 @@ search_simple:
 
 get_choice_value:
   - by: xpath
-    locator: '//*[@class="ivu-select-item"]'
+    locator: '//*[@class="ivu-select-item" and contains(text(),"${expect}")]'
     action: wait_display
 
 get_choice_value_not_exist:

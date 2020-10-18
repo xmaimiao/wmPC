@@ -14,9 +14,10 @@ class Postgraduate_Sign_In_Record(BasePage):
         self.step(postgraduate_sign_in_record_dir,"search_simple")
         return self
 
-    def serach_simple_records(self):
+    def serach_simple_records(self,expect):
         '''
         簡易查詢，當前頁面的記錄總數
         '''
+        self._params["expect"] = expect
         sleep(4)
         return self.step(postgraduate_sign_in_record_dir,"serach_simple_records").text

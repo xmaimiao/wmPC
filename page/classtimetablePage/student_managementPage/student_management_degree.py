@@ -16,13 +16,14 @@ class Student_Management_Degree(BasePage):
         self.step(student_management_degree_dir,"search_simple")
         return self
 
-    def get_choice_value(self):
+    def get_choice_value(self,expect):
         '''
         獲取到下拉框的值
         '''
         # self.set_implicitly_wait(20)
         # result = self.step(student_management_degree_dir,"get_choice_value")
         # self.set_implicitly_wait(3)
+        self._params["expect"] = expect
         sleep(2)
         return self.step(student_management_degree_dir,"get_choice_value").text
 
