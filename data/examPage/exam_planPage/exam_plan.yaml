@@ -1,0 +1,4 @@
+add_exists_plan:
+  - by: xpath
+    locator: '//*[@class="title-bar"]/div/div/button/span/span'
+    action: click

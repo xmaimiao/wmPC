@@ -1,0 +1,19 @@
+setup_datas: {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科)}
+test_search_student_username:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853A-U011-0041,expect: 10}
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 周彩珍,expect: 10}
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 10}
+test_get_course_bar_teachername:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 張靜}
+test_get_course_details_student_num:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 22}
+test_search_studentname:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,stu_keywords: "CHEN, LI",expect: "CHEN, LI"}
+test_search_studentstaffNo:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,stu_keywords: 1809853W-U011-0025,expect: 1809853W-U011-0025}
+test_get_lessontime:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 2020/09/21}
+test_get_lesson_student_num:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 22}
+test_back_to_student_management_degree:
+  - {username: test38-test,password: wemust@2020,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1809853au011004,expect: 10}

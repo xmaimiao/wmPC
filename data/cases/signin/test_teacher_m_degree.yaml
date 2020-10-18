@@ -1,0 +1,53 @@
+setup_datas: {username: jlee,password: wemust@dev,application: 課表,memu: 教師課表(本科)}
+test_course_type:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,week: 星期一,course_num: 2,data_num: 3,expect: 特殊混合課堂}
+test_simply_search_course_name:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: 宏觀經濟學,expect: 8}
+test_simply_search_tearch_name:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: 龐宇,expect: 2}
+test_simply_search_tearch_username:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: skcheong,expect: 7}
+test_simply_search_course_code:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: PEW01-02,expect: 3}
+test_advanced_search_teachername:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,teachername: 龐宇,expect: 2}
+test_advanced_search_username:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,tusername: kcheong,expect: 7}
+test_advanced_search_room:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,room: A001,expect: 22}
+test_advanced_search_course_name:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_name: 宏觀經濟學,expect: 8}
+test_advanced_search_course_code:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_code: PEW01-02,expect: 3}
+test_advanced_search_course_type:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_type: 混合課堂,expect: 33}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_type: 特殊混合課堂,expect: 112}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_type: 線下課堂,expect: 914}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_type: 網課,expect: 0}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_type: 雲課堂,expect: 63}
+test_advanced_search_reset:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,course_code: EW01-02,expect: 3}
+test_get_H_S_N_course_room:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: BITM1307,week: 一,course_num: 2,expect: O302}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: PHYS100,week: 一,course_num: 2,expect: C301}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: BITM1307,week: 五,course_num: 2,expect: O301}
+test_get_H_S_N_course_zoom:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: PHYS100,week: 一,course_num: 2,expect: https://zoom.must.edu.mo}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: BITM1307,week: 五,course_num: 2,expect: https://zoom.must.edu.mo}
+test_get_Z_M_course_room:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 18,keywords: BITM1905-02,week: 一,course_num: 2,expect: https://zoom.must.edu.mo}
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,expect: https://zoom.must.edu.mo}
+test_get_course_details_student_num:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,expect: 50}
+test_search_studentname:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,stu_keywords: 'CHEN, YANYING',expect: 'CHEN, YANYING'}
+test_search_studentstaffNo:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,stu_keywords: 1909853G-B411-0164,expect: 1909853G-B411-0164}
+test_get_lessontime:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,expect: 2020/09/23}
+test_get_lesson_student_num:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,expect: 50}
+test_back_to_teacher_management_degree:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 21,keywords: GMST001,week: 三,course_num: 2,expect: 1}
+test_get_program:
+  - {username: test11,password: wemust@dev,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 24,week: 四,course_num: 2,stu_keywords: 1509853L-B011-0082,expect: 工商管理學士學位}

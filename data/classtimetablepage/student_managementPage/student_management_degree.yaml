@@ -1,0 +1,63 @@
+search_simple:
+  - by: xpath
+    locator: '//*[@class="ivu-select-input"]'
+    action: send
+    value: click
+  - by: xpath
+    locator: '//*[@class="ivu-select-input"]'
+    action: clear
+  - by: xpath
+    locator: '//*[@class="ivu-select-input"]'
+    action: send
+    value: ${keywords_stu_all}
+
+get_choice_value:
+  - by: xpath
+    locator: '//*[@class="ivu-select-item"]'
+    action: wait_display
+
+get_choice_value_not_exist:
+  - by: xpath
+    locator: '//*[@class="ivu-select-not-found"]/li'
+    action: wait_display
+
+choice_student:
+  - by: xpath
+    locator: '//*[@class="ivu-select-item"]'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="ivu-select-item"]'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-btn ivu-btn-primary"]/span'
+    action: click
+
+get_current_week_courses_num:
+  - by: xpath
+    locator: '//*[@class="my-course-tag"]'
+    action: len
+
+get_course_bar_teachername:
+  - by: xpath
+    locator: '//*[@class="wrap"]/table/div[1]/div[1]/p'
+    action: text
+
+get_course_details:
+  - by: xpath
+    locator: '//*[@class="wrap"]/table/div[1]/div[1]/p'
+    action: click
+
+get_course_details_student_num:
+  - by: xpath
+    locator: '//*[@class="wrap"]/table/div[1]//*[@class="timetable-popper-footer-href"]'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="wrap"]/table/div[1]//*[@class="timetable-popper-footer-href"]'
+    action: text
+
+
+goto_classmate:
+  - by: xpath
+    locator: '//*[@class="wrap"]/table/div[1]//*[@class="timetable-popper-footer-href"]'
+    action: click
+

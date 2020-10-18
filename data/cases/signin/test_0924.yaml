@@ -1,0 +1,11 @@
+setup_datas: {username: test38-test,password: wemust@Better,application: 課表}
+test_get_program:
+  - {username: test38-test,password: wemust@Better,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 24,week: 四,course_num: 2,stu_keywords: 1509853L-B011-0082,expect: 工商管理學士學位}
+test_get_Z_M_course_teachername:
+  - {username: test38-test,password: wemust@Better,application: 課表,memu: 教師課表(本科),year: 2020,month: 9,day: 23,course_type: 網課,week: 三,course_num: 2,expect: "張鋒,徐懿"}
+test_doctor_in_records:
+  - {username: test38-test,password: wemust@Better,application: 課表,memu: 研究生簽到記錄,keywords: DBMZ07,expect: 研究方法一 (DBMZ07)}
+test_search_student_username_is_exist:
+  - {username: test38-test,password: wemust@Better,application: 課表,memu: 學生課表(本科),keywords_stu_all: 1509853L-B011-0082,expect: 丁小楼}
+test_search_student_username_not_exist:
+  - {username: test38-test,password: wemust@Better,application: 課表,memu: 學生課表(本科),keywords_stu_all: 2009853G-AC20-0151,expect: 無匹配資料}

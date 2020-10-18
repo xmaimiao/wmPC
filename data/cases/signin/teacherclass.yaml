@@ -1,0 +1,44 @@
+- {staffNo : ,
+   term: ,
+   memu : 教師課表,
+   expect_room : 雲課室,
+   type_num : 0,
+   course_num : 2,
+   week : 星期一,
+   expect_type : 雲課堂}
+
+- {staffNo : ,
+   term: ,
+   memu : 教師課表,
+   expect_room : 線下課室,
+   type_num : 1,
+   course_num : 3,
+   week : 星期一,
+   expect_type : 線下課堂}
+
+- {staffNo : ,
+   term: ,
+   memu : 教師課表,
+   expect_room : 線下課室,
+   type_num : 2,
+   course_num : 4,
+   week : 星期一,
+   expect_type : 混合課堂}
+
+- {staffNo : ,
+   term: ,
+   memu : 教師課表,
+   expect_room : 時間,
+   type_num : 0,
+   course_num: 2,
+   week : 星期五,
+   expect_type : 網課}
+
+- {staffNo : ,
+   term: ,
+   memu : 教師課表,
+   expect_room : 線下課室,
+   type_num : 3,
+   course_num : 5,
+   week : 星期一,
+   expect_type : 特殊混合課堂}

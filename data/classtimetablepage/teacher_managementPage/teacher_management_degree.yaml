@@ -1,0 +1,171 @@
+get_all_facCode:
+  - by: xpath
+    locator: '//*[@class="content"]/div[2]/div'
+    action: move
+  - by: xpath
+    locator: '//i[@class="ivu-icon ivu-icon-ios-close-circle ivu-select-arrow"]'
+    action: click
+
+simply_search:
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: send
+    value: ${keywords}
+  - by: xpath
+    locator: '//*[@class="ivu-icon ivu-icon-ios-search"]'
+    action: click
+
+get_yy_mm_dd:
+  - by: xpath
+    locator: '//*[@class="date-picker-icon"]/img'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-date-picker-header-label"][1]'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-picker-panel-content"]//*[contains(text(),"${year}")]'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-picker-panel-content"]//*[contains(text(),"${month}")]'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-picker-panel-content"]//*[contains(text(),"${day}")]'
+    action: click
+
+click_advanced_search:
+  - by: xpath
+    locator: '//*[@class="text-button"]'
+    action: click
+
+advanced_search_teachername:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[3]//tr[1]//input'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[3]//tr[1]//input'
+    action: send
+    value: ${teachername}
+
+advanced_search_username:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[1]//tr[3]//input'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[1]//tr[3]//input'
+    action: send
+    value: ${tusername}
+
+
+advanced_search_room:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[1]//tr[2]//input'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[1]//tr[2]//input'
+    action: send
+    value: ${room}
+
+advanced_search_course_name:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[2]//tr[2]//input'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[2]//tr[2]//input'
+    action: send
+    value: ${course_name}
+
+advanced_search_course_code:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[3]//tr[2]//input'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[3]//tr[2]//input'
+    action: send
+    value: ${course_code}
+
+advanced_search_course_type:
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[4]//tr[2]//div/span'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]/table[4]//tr[2]//div/span'
+    action: click
+  - by: xpath
+    locator: '//*[@class="form-items-wrapper"]//li[contains(text(),"${course_type}")]'
+    action: click
+
+advanced_search_confirm:
+  - by: xpath
+    locator: '//*[@class="operations"]/button[1]/span'
+    action: click
+
+advanced_search_reset:
+  - by: xpath
+    locator: '//*[@class="operations"]/button[2]/span'
+    action: click
+
+get_current_week_courses_num:
+  - by: xpath
+    locator: '//*[@class="tag-content"]'
+    action: len
+
+get_course_details:
+  - by: xpath
+    locator: '//div[@class="timetable"]//div[contains(text(),"${week}")]/../div[${course_num}]/div/div/div/div[2]/p/span[2]'
+    action: wait_click
+  - by: xpath
+    locator: '//div[@class="timetable"]//div[contains(text(),"${week}")]/../div[${course_num}]/div/div/div/div[2]/p/span[2]'
+    action: click
+
+get_course_type:
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[3]/p[2]'
+    action: text
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[3]/p[2]'
+    action: text
+
+get_H_S_N_course_room:
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[4]/p[2]'
+    action: text
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[4]/p[2]'
+    action: text
+
+get_H_S_N_course_zoom:
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[5]/p[2]/a'
+    action: text
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[5]/p[2]/a'
+    action: text
+
+get_Z_M_course_room:
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[4]/p[2]/a'
+    action: wait
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[4]/p[2]/a'
+    action: text
+
+get_Z_M_course_teachername:
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[last()]/p[2]'
+    action: wait
+  - by: xpath
+    locator: '//div[@class="item-wrap"]/div[last()]/p[2]'
+    action: text
+
+get_course_details_student_num:
+  - by: xpath
+    locator: '//div[@class="tip-content"]/div[3]'
+    action: text
+
+goto_classmate:
+  - by: xpath
+    locator: '//div[@class="tip-content"]/div[3]'
+    action: wait_click
+  - by: xpath
+    locator: '//div[@class="tip-content"]/div[3]'
+    action: click

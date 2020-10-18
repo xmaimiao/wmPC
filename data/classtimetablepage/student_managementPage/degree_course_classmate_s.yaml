@@ -1,0 +1,51 @@
+get_lessontime:
+  - by: xpath
+    locator: '//div[@class="course-info"]/span[4]'
+    action: text
+
+get_lesson_student_num:
+  - by: xpath
+    locator: '//div[@class="course-info"]/span[6]'
+    action: text
+
+search_studentname:
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: send
+    value: ${stu_keywords}
+  - by: xpath
+    locator: '//*[@class="search-btn ivu-btn ivu-btn-default"]/span'
+    action: click
+  - by: xpath
+    locator: '//*[@class="name"]/span[2]'
+    #    span[2]定位元素中文名稱
+#    locator: '//*[@class="name"]/span[1]'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="name"]/span[2]'
+    #    span[2]定位元素中文名稱
+#    locator: '//*[@class="name"]/span[1]'
+    action: text
+
+search_studentstaffNo:
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: send
+    value: ${stu_keywords}
+  - by: xpath
+    locator: '//*[@class="search-btn ivu-btn ivu-btn-default"]/span'
+    action: click
+  - by: xpath
+    locator: '//*[@class="search-btn ivu-btn ivu-btn-default"]/span'
+    action: wait
+  - by: xpath
+    locator: '//*[@class="ivu-table-row"][1]/td[2]//span'
+    action: text
+
+back_to_student_management_degree:
+  - by: xpath
+    locator: '//button[@class="goback-btn ivu-btn ivu-btn-default"]/span/img'
+    action: wait_click
+  - by: xpath
+    locator: '//button[@class="goback-btn ivu-btn ivu-btn-default"]/span/img'
+    action: click

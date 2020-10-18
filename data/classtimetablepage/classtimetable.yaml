@@ -1,0 +1,28 @@
+goto_undergradute_record:
+  -
+    by: xpath
+    locator: '//div[@class="we-sider-menu app-sider-menu"]//span[contains(text(),"${memu}")]'
+    action: click
+goto_teacher_management_degree:
+  -
+    by: xpath
+    locator: '//div[@class="we-sider-menu app-sider-menu"]//span[contains(text(),"${memu}")]'
+    action: click
+
+goto_student_management_degree:
+  -
+    by: xpath
+    locator: '//div[@class="we-sider-menu app-sider-menu"]//span[contains(text(),"${memu}")]'
+    action: click
+
+goto_room_management_degree:
+  -
+    by: xpath
+    locator: '//div[@class="we-sider-menu app-sider-menu"]//span[contains(text(),"${memu}")]'
+    action: click
+
+goto_postgraduate_sign_in_record:
+  -
+    by: xpath
+    locator: '//div[@class="we-sider-menu app-sider-menu"]//span[contains(text(),"${memu}")]'
+    action: click

@@ -1,0 +1,19 @@
+search_simple:
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: click
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: clear
+  - by: xpath
+    locator: '//*[@class="ivu-input ivu-input-default"]'
+    action: send
+    value: ${keywords}
+  - by: xpath
+    locator: '//*[@class="ivu-icon ivu-icon-ios-search"]'
+    action: click
+
+serach_simple_records:
+  - by: xpath
+    locator: '//*[@class="ivu-table-tbody"]/tr[1]/td[3]//span'
+    action: wait_display
